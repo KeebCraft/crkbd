@@ -448,7 +448,7 @@ U 1 1 5A5E37B0
 P 7400 3075
 F 0 "SW21" H 7550 3185 50  0000 C CNN
 F 1 "SW_PUSH" H 7400 2995 50  0000 C CNN
-F 2 "kbd:CherryMX_Hotswap_1.5u" H 7400 3075 50  0001 C CNN
+F 2 "kbd:CherryMX_Hotswap" H 7400 3075 50  0001 C CNN
 F 3 "" H 7400 3075 50  0000 C CNN
 	1    7400 3075
 	1    0    0    -1  
@@ -645,11 +645,8 @@ reset
 Text GLabel 1225 4025 0    60   Input ~ 0
 reset
 NoConn ~ 2475 2275
-NoConn ~ 1075 2275
 Text GLabel 2475 1575 2    47   Input ~ 0
 col0
-NoConn ~ 2475 2175
-NoConn ~ 1075 2175
 Text GLabel 1075 1575 0    47   Input ~ 0
 SDA
 Text GLabel 1075 1675 0    47   Input ~ 0
@@ -1261,17 +1258,6 @@ F 3 "" H 14675 3200 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:D D41
-U 1 1 5C25F93B
-P 14975 3350
-F 0 "D41" H 14975 3450 50  0000 C CNN
-F 1 "D" H 14975 3250 50  0000 C CNN
-F 2 "kbd:D3_SMD_v2" H 14975 3350 50  0001 C CNN
-F 3 "" H 14975 3350 50  0001 C CNN
-	1    14975 3350
-	0    -1   -1   0   
-$EndComp
-$Comp
 L kbd:SW_PUSH SW42
 U 1 1 5C25F941
 P 15375 3200
@@ -1283,17 +1269,6 @@ F 3 "" H 15375 3200 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:D D42
-U 1 1 5C25F947
-P 15675 3350
-F 0 "D42" H 15675 3450 50  0000 C CNN
-F 1 "D" H 15675 3250 50  0000 C CNN
-F 2 "kbd:D3_SMD_v2" H 15675 3350 50  0001 C CNN
-F 3 "" H 15675 3350 50  0001 C CNN
-	1    15675 3350
-	0    -1   -1   0   
-$EndComp
-$Comp
 L kbd:SW_PUSH SW40
 U 1 1 5C25F94D
 P 13975 3200
@@ -1303,17 +1278,6 @@ F 2 "kbd:CherryMX_Hotswap" H 13975 3200 50  0001 C CNN
 F 3 "" H 13975 3200 50  0000 C CNN
 	1    13975 3200
 	1    0    0    -1  
-$EndComp
-$Comp
-L Device:D D40
-U 1 1 5C25F953
-P 14275 3350
-F 0 "D40" H 14275 3450 50  0000 C CNN
-F 1 "D" H 14275 3250 50  0000 C CNN
-F 2 "kbd:D3_SMD_v2" H 14275 3350 50  0001 C CNN
-F 3 "" H 14275 3350 50  0001 C CNN
-	1    14275 3350
-	0    -1   -1   0   
 $EndComp
 Text GLabel 12275 1250 1    60   Input ~ 0
 col1_r
@@ -1333,8 +1297,6 @@ Text GLabel 12025 2300 0    60   Input ~ 0
 row1_r
 Text GLabel 12025 2900 0    60   Input ~ 0
 row2_r
-Text GLabel 14100 3500 0    60   Input ~ 0
-row3_r
 $Comp
 L power:GNDA #PWR017
 U 1 1 5C25F963
@@ -1419,11 +1381,8 @@ reset_r
 Text GLabel 9375 3900 0    60   Input ~ 0
 reset_r
 NoConn ~ 10875 2225
-NoConn ~ 9475 2225
 Text GLabel 10875 1525 2    47   Input ~ 0
 col0_r
-NoConn ~ 10875 2125
-NoConn ~ 9475 2125
 Text GLabel 9475 1525 0    47   Input ~ 0
 SDA_r
 Text GLabel 9475 1625 0    47   Input ~ 0
@@ -1466,8 +1425,6 @@ F 3 "" H 10725 3175 50  0001 C CNN
 	1    10450 3000
 	1    0    0    -1  
 $EndComp
-Connection ~ 14275 3500
-Connection ~ 14975 3500
 Wire Wire Line
 	12025 2900 12175 2900
 Wire Wire Line
@@ -1511,10 +1468,6 @@ Wire Wire Line
 Wire Wire Line
 	10750 3025 10750 3125
 Wire Wire Line
-	14275 3500 14975 3500
-Wire Wire Line
-	14975 3500 15675 3500
-Wire Wire Line
 	9375 1425 9475 1425
 Wire Wire Line
 	12175 2900 12875 2900
@@ -1546,8 +1499,6 @@ Wire Wire Line
 	14275 1700 14975 1700
 Wire Wire Line
 	14975 1700 15675 1700
-Wire Wire Line
-	14100 3500 14275 3500
 Wire Wire Line
 	11575 1250 11575 1400
 Wire Wire Line
@@ -1602,7 +1553,6 @@ Wire Wire Line
 Connection ~ 15075 2000
 Wire Wire Line
 	15075 2000 15075 2600
-Connection ~ 15075 2600
 Wire Wire Line
 	15075 2600 15075 3200
 NoConn ~ 2350 2875
@@ -2913,4 +2863,135 @@ Wire Wire Line
 	9350 2875 9725 2875
 Wire Wire Line
 	9725 2875 9725 3050
+$Comp
+L Device:D D44
+U 1 1 603B7104
+P 16450 3350
+F 0 "D44" H 16450 3450 50  0000 C CNN
+F 1 "D" H 16450 3250 50  0000 C CNN
+F 2 "kbd:D3_SMD_v2" H 16450 3350 50  0001 C CNN
+F 3 "" H 16450 3350 50  0001 C CNN
+	1    16450 3350
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	14100 3500 14275 3500
+Wire Wire Line
+	14975 3500 15675 3500
+Wire Wire Line
+	14275 3500 14975 3500
+Connection ~ 14975 3500
+Connection ~ 14275 3500
+Text GLabel 14100 3500 0    60   Input ~ 0
+row3_r
+$Comp
+L Device:D D40
+U 1 1 5C25F953
+P 14275 3350
+F 0 "D40" H 14275 3450 50  0000 C CNN
+F 1 "D" H 14275 3250 50  0000 C CNN
+F 2 "kbd:D3_SMD_v2" H 14275 3350 50  0001 C CNN
+F 3 "" H 14275 3350 50  0001 C CNN
+	1    14275 3350
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:D D42
+U 1 1 5C25F947
+P 15675 3350
+F 0 "D42" H 15675 3450 50  0000 C CNN
+F 1 "D" H 15675 3250 50  0000 C CNN
+F 2 "kbd:D3_SMD_v2" H 15675 3350 50  0001 C CNN
+F 3 "" H 15675 3350 50  0001 C CNN
+	1    15675 3350
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:D D41
+U 1 1 5C25F93B
+P 14975 3350
+F 0 "D41" H 14975 3450 50  0000 C CNN
+F 1 "D" H 14975 3250 50  0000 C CNN
+F 2 "kbd:D3_SMD_v2" H 14975 3350 50  0001 C CNN
+F 3 "" H 14975 3350 50  0001 C CNN
+	1    14975 3350
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:Rotary_Encoder_Switch SW44
+U 1 1 6038DB9E
+P 16050 3500
+F 0 "SW44" V 16096 3270 50  0000 R CNN
+F 1 "Rotary_Encoder_Switch" V 16005 3270 50  0000 R CNN
+F 2 "Rotary_Encoder:RotaryEncoder_Alps_EC11E-Switch_Vertical_H20mm" H 15900 3660 50  0001 C CNN
+F 3 "~" H 16050 3760 50  0001 C CNN
+	1    16050 3500
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	16450 3200 16150 3200
+Connection ~ 15075 2600
+Wire Wire Line
+	16450 3500 15675 3500
+Connection ~ 15675 3500
+Wire Wire Line
+	15950 3200 15775 3200
+Text GLabel 15775 1250 1    60   Input ~ 0
+col6_r
+Wire Wire Line
+	15775 1250 15775 3200
+Text GLabel 10875 2125 2    47   Input ~ 0
+col6_r
+Text GLabel 9475 2125 0    47   Input ~ 0
+enca_r
+Text GLabel 9475 2225 0    47   Input ~ 0
+encb_r
+Text GLabel 15950 3800 3    47   Input ~ 0
+enca_r
+Text GLabel 16150 3800 3    47   Input ~ 0
+enca_r
+$Comp
+L Device:D D43
+U 1 1 60555455
+P 8475 3225
+F 0 "D43" H 8475 3325 50  0000 C CNN
+F 1 "D" H 8475 3125 50  0000 C CNN
+F 2 "kbd:D3_SMD_v2" H 8475 3225 50  0001 C CNN
+F 3 "" H 8475 3225 50  0001 C CNN
+	1    8475 3225
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:Rotary_Encoder_Switch SW43
+U 1 1 6055545B
+P 8075 3375
+F 0 "SW43" V 8121 3145 50  0000 R CNN
+F 1 "Rotary_Encoder_Switch" V 8030 3145 50  0000 R CNN
+F 2 "Rotary_Encoder:RotaryEncoder_Alps_EC11E-Switch_Vertical_H20mm" H 7925 3535 50  0001 C CNN
+F 3 "~" H 8075 3635 50  0001 C CNN
+	1    8075 3375
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	8475 3075 8175 3075
+Wire Wire Line
+	8475 3375 7700 3375
+Wire Wire Line
+	7975 3075 7800 3075
+Text GLabel 7975 3675 3    47   Input ~ 0
+enca
+Text GLabel 8175 3675 3    47   Input ~ 0
+encb
+Text GLabel 7800 1125 1    60   Input ~ 0
+col6
+Wire Wire Line
+	7800 1125 7800 3075
+Text GLabel 1075 2175 0    47   Input ~ 0
+enca
+Text GLabel 2475 2175 2    47   Input ~ 0
+col6
+Text GLabel 1075 2275 0    47   Input ~ 0
+encb
+NoConn ~ 8075 3675
+NoConn ~ 16050 3800
 $EndSCHEMATC
